@@ -1,4 +1,4 @@
-name: Deploy Simple-Web as tough
+name: Deploy Simple-Web as tough1
 on:
   push:
     branches:
