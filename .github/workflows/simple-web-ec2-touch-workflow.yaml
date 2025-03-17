@@ -24,7 +24,7 @@ jobs:
           aws s3 ls
       - name: 3.파일 목록보기
         run: |
-         ssh -o StrictHostKeyChecking=no ${{ vars.AWS_USER }}@${{ vars.AWS_HOST }}  "ls -al /home/${{ vars.AWS_USER }}"
+         ssh -o StrictHostKeyChecking=no ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}  "ls -al /home/${{ secrets.AWS_USER }}"
       - name: 4.파일 서버로 복사
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.AWS_USER }}@${{ secrets.AWS_HOST }}  "sudo chown -R ec2-user:ec2-user /usr/share/nginx/html"
