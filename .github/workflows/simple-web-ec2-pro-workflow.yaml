@@ -14,10 +14,8 @@ jobs:
       - name: 2.AWS CLI 접속정보 설정
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          role-to-assume: arn:aws:iam::235494823321:role/GithubActionsRole2
           aws-region: ap-northeast-2
-
       - name: 3.아티팩트 만들기
         run: |
           pwd
