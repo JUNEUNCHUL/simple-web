@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: simple-web
-          image: juneunchul2/simple-web:2276
+          image: juneunchul2/simple-web:2277
           ports:
             - containerPort: 80
